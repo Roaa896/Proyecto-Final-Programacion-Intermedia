@@ -38,5 +38,15 @@ public class Cita {
         if (fecha == null || !fecha.matches("\\d{2}/\\d{2}/\\d{4}")) {
             throw new FechaInvalidaException("La fecha debe tener el formato dd/mm/aaaa.");
         }
+
+        int dia = Integer.parseInt(fecha.substring(0, 2));
+        int mes = Integer.parseInt(fecha.substring(3, 5));
+
+        if (mes < 1 || mes > 12) {
+            throw new FechaInvalidaException("El mes debe estar entre 01 y 12.");
+        }
+        if (dia < 1 || dia > 31) {
+            throw new FechaInvalidaException("El día debe estar entre 01 y 31.");
+        }
     }
 }

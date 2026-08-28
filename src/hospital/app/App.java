@@ -315,6 +315,7 @@ public class App {
 
                         System.out.print("Especialidad: ");
                         String especialidadMedico = sc.nextLine();
+                        Validaciones.validarNombre(especialidadMedico);
 
                         Medico nuevoMedico = new Medico(nombreMedico, idMedico, especialidadMedico);
                         medicos.add(nuevoMedico);
@@ -336,6 +337,7 @@ public class App {
 
                         System.out.print("Especialidad: ");
                         String especialidadEnfermero = sc.nextLine();
+                        Validaciones.validarNombre(especialidadEnfermero);
 
                         System.out.print("Turno: ");
                         String turno = sc.nextLine();
